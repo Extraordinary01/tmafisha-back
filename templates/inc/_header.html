@@ -1,0 +1,51 @@
+{% load mptt_tags %}
+<header class="">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="{% url 'home' %}"><h2>Türkmen Afişa<em>.</em></h2></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+            <a class="nav-link" href="{% url 'home' %}">Öý sahypasy
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'contact' %}">Habarlaşmak</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">Kategoriýalar</a>
+              <ul class="second-level-menu">
+                  {% for item in category %}
+                      <li><a class="nav-link" href="{{ item.get_absolute_url }}">{{ item.name }}</a></li>
+                  {% endfor %}
+              </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Şäherler</a>
+              <ul class="second-level-menu">
+                  {% recursetree cities %}
+                      <li>
+                      {% if not node.is_leaf_node %}
+                          <a class="nav-link" href="#">{{ node.name }}</a>
+                          <ul class="third-level-menu">
+                            {{ children }}
+                          </ul>
+                      {% else %}
+                          <a class="nav-link" href="{{ node.get_absolute_url }}">{{ node.name }}</a>
+                      {% endif %}
+                      </li>
+                  {% endrecursetree %}
+              </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'stocks' %}">Aksiýalar</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

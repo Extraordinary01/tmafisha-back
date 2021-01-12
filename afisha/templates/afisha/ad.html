@@ -1,0 +1,82 @@
+{% extends 'base_index.html' %}
+{% block adlist %}
+    {% for ad in ads %}
+      <div class="{{ ad_class }}">
+      <div class="blog-post">
+        <div class="blog-thumb">
+          <img src="{{ ad.image.url }}" alt="ad-image">
+        </div>
+        <div class="down-content">
+          <span><a href="{{ ad.category__get_absolute_url }}">{{ ad.category__name }}</a></span>
+          <a href="{{ ad.get_absolute_url }}"><h4>{{ ad.title }}</h4></a>
+          <ul class="post-info">
+            <li><a href="#">{{ ad.created_at|date:"M d, Y" }}</a></li>
+          <li><a href="#">Gören adamlaryň sany: {{ ad.views }}</a></li>
+          </ul>
+          {% autoescape off %}
+                {{ ad.content|truncatewords:25 }}
+          {% endautoescape %}
+          <div class="post-options">
+            <div class="row">
+              <div class="col-12">
+                <ul class="post-tags">
+                  <li><i class="fa fa-tags"></i></li>
+                  <li><a href="{{ ad.city.get_absolute_url }}">{{ ad.city }}</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% empty %}
+        <div class="col-lg-12">
+            <div class="down-content">
+                <h4>Bagyşlaň siziň gözleýän mahabatlaryňyz entäk ýok!</h4>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
+{% block endads %}
+    {% if page_obj.has_other_pages %}
+      <div class="col-lg-12">
+          <ul class="page-numbers">
+            {% if page_obj.has_previous %}
+              <li>
+                 <a href="{{ q }}?page={{ page_obj.previous_page_number }}">Öňki</a>
+               </li>
+            {% endif %}
+            {% if page_obj.number|add:-3 > 1 %}
+                <li><a href="{{ q }}?page=1">1</a></li>
+                <li><a href="#">...</a></li>
+            {% endif %}
+            {% for p in page_obj.paginator.page_range %}
+                {% if page_obj.number == p %}
+                    <li class="active"><a href="#">{{ p }}</a></li>
+                {% elif page_obj.number|add:-3 < p and page_obj.number|add:3 > p %}
+                    <li><a href="{{ q }}?page={{ p }}">{{ p }}</a></li>
+                {% endif %}
+            {% endfor %}
+            {% if page_obj.number|add:3 < page_obj.num_pages %}
+                <li><a href="#">...</a></li>
+                <li><a href="{{ q }}?page={{ page_obj.num_pages }}">{{ page_obj.num_pages }}</a></li>
+            {% endif %}
+            {% if page_obj.has_next %}
+                <li>
+                  <a href="{{ q }}?page={{ page_obj.next_page_number}}">Indiki</a>
+                </li>
+            {% endif %}
+          </ul>
+      </div>
+  {% endif %}
+{% endblock %}
+{% block sidebar %}
+    <div class="col-lg-12">
+      <div class="sidebar-item">
+          <form action="{% url 'ad-list' %}" method="get">
+             {{ form.as_p }}
+             <input type="submit" class="btn btn-outline-warning" value="Filter">
+          </form>
+      </div>
+    </div>
+{% endblock %}

@@ -9,7 +9,11 @@
     <meta name="author" content="TemplateMo">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
 
-    <title>Türkmen Afişa</title>
+    <title>
+        {% block title %}
+            {{ title }}
+        {% endblock %}
+    </title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
@@ -19,6 +23,7 @@
     <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/templatemo-stand-blog.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/owl.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
 <!--
 
 TemplateMo 551 Stand Blog
@@ -41,60 +46,11 @@ https://templatemo.com/tm-551-stand-blog
     <!-- ***** Preloader End ***** -->
 
     <!-- Header -->
-    <header class="">
-      <nav class="navbar navbar-expand-lg">
-        <div class="container">
-          <a class="navbar-brand" href="index.html"><h2>Türkmen Afişa<em>.</em></h2></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="index.html">Öý sahypasy
-                  <span class="sr-only">(current)</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">Habarlaşmak</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="blog.html">Täzelikler</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="post-details.html">Şäherler</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Ulgama girmek</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
+    {% include 'inc/_header.html' %}
 
     {% block content %}
     {% endblock %}
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <ul class="social-icons">
-              <li><a href="#">Facebook</a></li>
-              <li><a href="#">Twitter</a></li>
-              <li><a href="#">Behance</a></li>
-              <li><a href="#">Linkedin</a></li>
-              <li><a href="#">Dribbble</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-12">
-            <div class="copyright-text">
-              <p>&copy; Ähli hukuklar goraglanan. Türkmen Afişa. 2021</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+    {% include 'inc/_footer.html' %}
     <!-- Bootstrap core JavaScript -->
     <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
     <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
@@ -105,6 +61,7 @@ https://templatemo.com/tm-551-stand-blog
     <script src="{% static 'assets/js/slick.js' %}"></script>
     <script src="{% static 'assets/js/isotope.js' %}"></script>
     <script src="{% static 'assets/js/accordions.js' %}"></script>
+    <script src="{% static 'assets/js/active.js' %}"></script>
 
     <script language = "text/Javascript">
       cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field

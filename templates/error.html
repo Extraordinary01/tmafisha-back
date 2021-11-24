@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block content %}
+{% block slider %}
+     {% include 'inc/_call_to_action.html' %}
+{% endblock %}
+	<div class="container">
+		<div class="row mt-4 ">
+			<div class="col-lg-12">
+				<h2 class="text-center">{{ content }}</h2>
+			</div>
+		</div>
+	</div>
+{% endblock %}

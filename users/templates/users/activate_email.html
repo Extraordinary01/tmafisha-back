@@ -1,0 +1,7 @@
+{% load i18n %}
+{% autoescape off %}
+    {% translate 'Salam' %} {{ user.username }},
+    {% translate 'Aşakdaky ýollanma basyp registrasiýaňyzy tassyklamagyňyzy haýyş edýäris' %},
+    http://{{ domain }}{% url 'activate' uidb64=uid token=token %}
+    {% translate 'Eger web sahypamyzda siz registrasiýadan geçmedik bolsaňyz, onda şu email-a üns bermäň!' %}
+{% endautoescape %}

@@ -1,4 +1,9 @@
 {% extends 'base_index.html' %}
+{% load i18n %}
+{% load ratings %}
+{% block description %}
+  {{ ad.description }}
+{% endblock %}
 {% block adlist %}
     <div class="col-lg-12">
       <div class="blog-post">
@@ -10,16 +15,23 @@
           <a href="{{ ad.get_absolute_url }}"><h4>{{ ad.title }}</h4></a>
           <ul class="post-info">
             <li><a href="#">{{ ad.created_at|date:"M d, Y" }}</a></li>
-          <li><a href="#">Gören adamlaryň sany: {{ ad.views }}</a></li>
+          <li><a href="#">{% trans 'Gören adamlaryň sany:' %} {{ ad.views }}</a></li>
           </ul>
           {% autoescape off %}
               {{ ad.content }}
           {% endautoescape %}
           <div class="post-options">
             <div class="row">
-              <div class="col-12">
+                <div class="col-md-6">
+                    {% ratings object %}
+                </div>
+                <div class="col-md-6 text-right">
+                    <a href="tel:{{ ad.phone }}" class="btn btn-success btn-lg" data-slug="{{ ad.slug }}" id="counter"><i class="fa fa-phone mr-2"></i>{% trans 'Jaň etmek' %}</a>
+                </div>
+              <div class="col-12 mt-2">
                 <ul class="post-tags">
                   <li><i class="fa fa-tags"></i></li>
+                  <li><a href="{{ ad.category.get_absolute_url }}">{{ ad.category }}</a></li>
                   <li><a href="{{ ad.city.get_absolute_url }}">{{ ad.city }}</a></li>
                 </ul>
               </div>

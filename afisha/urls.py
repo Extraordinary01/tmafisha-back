@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import ContactView, PopularAds, Search, AdView, StocksView, AdsByCity, AdsByCategory, GetAd, index
+from .views import ContactView, PopularAds, Search, AdView, StocksView, AdsByCity, AdsByCategory, GetAd, index, CounterRedirectView
 
 urlpatterns = [
     path('contact/', ContactView.as_view(), name='contact'),
@@ -10,5 +10,6 @@ urlpatterns = [
     path('category/<slug:slug>/', AdsByCategory.as_view(), name='category'),
     path('city/<slug:slug>/', AdsByCity.as_view(), name='city'),
     path('ad/<slug:slug>/', GetAd.as_view(), name='ad-details'),
+    path('ad/<slug:slug>/counter', CounterRedirectView.as_view(), name='ad-counter'),
     path('', index, name='home'),
 ]

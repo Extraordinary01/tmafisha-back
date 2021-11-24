@@ -1,42 +1,9 @@
 {%  extends 'base.html' %}
 {% load mptt_tags %}
+{% load i18n %}
 {% block content %}
 {% block slider %}
-     <div class="heading-page header-text">
-      <section class="page-heading">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="text-content">
-                <h4><a href="{% url 'popular-ads' %}">Iň meşhur mahabatlar</a></h4>
-                <h2>Iň köp görülen mahabatlar bilen tanyş boluň</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-     </div>
-    <section class="call-to-action">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="main-content">
-              <div class="row">
-                <div class="col-lg-8">
-                  <span>Öz mahabatlaryňyzy goşmak üçin biz bilen habarlaşyň</span>
-                  <h4>Bu ýerde siziň mahabatyňyz hem bolup biler!</h4>
-                </div>
-                <div class="col-lg-4">
-                  <div class="main-button">
-                    <a href="{% url 'contact' %}" target="_parent">Habarlaşmak</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+     {% include 'inc/_call_to_action.html' %}
 {% endblock %}
 <section class="blog-posts">
   <div class="container">
@@ -49,23 +16,24 @@
               <div class="{{ ad_class }}">
               <div class="blog-post">
                 <div class="blog-thumb">
-                  <img src="{{ ad.image.url }}" alt="ad-image">
+                    <a href="{{ ad.get_absolute_url }}"><img src="{{ ad.image.url }}" alt="ad-image"></a>
                 </div>
                 <div class="down-content">
-                  <span><a href="{{ ad.category__get_absolute_url }}">{{ ad.category__name }}</a></span>
+                  <a href="{{ ad.category__get_absolute_url }}"><span>{{ ad.category__name }}</span></a>
                   <a href="{{ ad.get_absolute_url }}"><h4>{{ ad.title }}</h4></a>
                   <ul class="post-info">
                     <li><a href="#">{{ ad.created_at|date:"M d, Y" }}</a></li>
-                  <li><a href="#">Gören adamlaryň sany: {{ ad.views }}</a></li>
+                  <li><a href="#">{% trans 'Gören adamlaryň sany:' %} {{ ad.views }}</a></li>
                   </ul>
                   {% autoescape off %}
-                        {{ ad.content|truncatewords:25 }}
+                      {{ ad.content|truncatewords:25 }}
                   {% endautoescape %}
                   <div class="post-options">
                     <div class="row">
                       <div class="col-12">
                         <ul class="post-tags">
                           <li><i class="fa fa-tags"></i></li>
+                            <li><a href="{{ ad.category.get_absolute_url }}">{{ ad.category }}</a></li>,
                           <li><a href="{{ ad.city.get_absolute_url }}">{{ ad.city }}</a></li>
                         </ul>
                       </div>
@@ -85,12 +53,12 @@
         <div class="sidebar">
           <div class="row">
             <div class="col-lg-12">
-              <div class="sidebar-item search">
+              <div class="sidebar-item">
                 <form id="search_form" name="gs" method="GET" action="{% url 'search' %}">
-                  <input type="text" name="q" class="searchText" placeholder="Mahabatlary gözlemek..." autocomplete="on">
+                  <input type="text" name="q" class="form-control" placeholder="{% trans 'Postlary gözlemek...' %}" autocomplete="on">
                   <div class="row">
-                      <div class="col-lg-4">
-                          <input type="submit" class="btn btn-outline-warning mt-3" value="Gözle">
+                      <div class="col-lg-4 mt-2">
+                          <input type="submit" class="btn btn-outline-warning mt-3" value="{% trans 'Gözle' %}">
                       </div>
                   </div>
                 </form>
@@ -100,7 +68,7 @@
                 <div class="col-lg-12">
                       <div class="sidebar-item recent-posts">
                         <div class="sidebar-heading">
-                          <h2>Soňky mahabatlar</h2>
+                          <h2>{% trans 'Soňky postlar' %}</h2>
                         </div>
                         <div class="content">
                           <ul>
@@ -117,7 +85,7 @@
                     <div class="col-lg-12">
                       <div class="sidebar-item categories">
                         <div class="sidebar-heading">
-                          <h2>Kategoriýalar</h2>
+                          <h2>{% trans 'Kategoriýalar' %}</h2>
                         </div>
                         <div class="content">
                           <ul>
@@ -131,7 +99,7 @@
                     <div class="col-lg-12">
                       <div class="sidebar-item tags">
                         <div class="sidebar-heading">
-                          <h2>Şäherler</h2>
+                          <h2>{% trans 'Şäherler' %}</h2>
                         </div>
                         <div class="content">
                           <ul>
@@ -140,7 +108,7 @@
                                 {% if not node.is_leaf_node %}
                                     {{ children }}
                                 {% else %}
-                                    <a href="{{ node.get_absolute.url }}">{{ node.name }}</a>
+                                    <a href="{{ node.get_absolute_url }}">{{ node.name }}</a>
                                 {% endif %}
                                 </li>
                             {% endrecursetree %}

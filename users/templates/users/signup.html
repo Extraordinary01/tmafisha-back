@@ -1,0 +1,16 @@
+{% extends 'base_register.html' %}
+{% load i18n %}
+{% load static %}
+{% load usertags %}
+{% block title %}
+    {% translate 'Registrasiýa' %}
+{% endblock %}
+{% block message %}
+    {% show_auth 'signup' type forms %}
+    <p>
+    	{% translate 'Siz registrasiýa düwmesine basyp, şu ' %}
+    	<a href="{% static 'Şertnama.docx' %}">{% translate 'şertnama ' %}</a>
+    	{% translate 'bilen razylaşýaňyz!' %}
+    </p>
+    <p>{% translate 'Eger siz öň ulgama girip gören bolsaňyz, onda ' %}<a href="{% url 'login' %}">{% translate 'ulgama giriň' %}</a></p>
+{% endblock %}

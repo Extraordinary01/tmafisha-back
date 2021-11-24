@@ -1,0 +1,36 @@
+{% load i18n %}
+<div class="heading-page header-text">
+  <section class="page-heading">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="text-content">
+            <a href="{% url 'popular-ads' %}"><h4>{% trans 'Iň meşhur postlar' %}</h4></a>
+            <h2>{% trans 'Iň köp görülen postlar bilen tanyş boluň' %}</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ </div>
+<section class="call-to-action">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="main-content">
+          <div class="row">
+            <div class="col-lg-8">
+              <span>{% trans 'Öz postlaryňyzy goşmak üçin biz bilen habarlaşyň' %}</span>
+              <h4>{% trans 'Bu ýerde siziň postuňyz hem bolup biler!' %}</h4>
+            </div>
+            <div class="col-lg-4">
+              <div class="main-button">
+                <a href="{% url 'contact' %}" target="_parent">{% trans 'Habarlaşmak' %}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

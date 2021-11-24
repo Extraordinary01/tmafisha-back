@@ -1,18 +1,17 @@
+{% load i18n %}
 <footer>
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
         <ul class="social-icons">
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">Twitter</a></li>
-          <li><a href="#">Behance</a></li>
-          <li><a href="#">Linkedin</a></li>
-          <li><a href="#">Dribbble</a></li>
+        {% for item in social %}
+          <li><a href="#">{{ item }}</a></li>
+        {% endfor %}
         </ul>
       </div>
       <div class="col-lg-12">
         <div class="copyright-text">
-          <p>&copy; Ähli hukuklar goraglanan. Türkmen Afişa. 2021</p>
+          <p>&copy; {% trans 'Ähli hukuklar goraglanan. Saýla. ' %}. {{ current_date|date:"Y" }}</p>
         </div>
       </div>
     </div>

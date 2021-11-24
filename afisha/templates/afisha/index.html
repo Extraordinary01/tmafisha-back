@@ -1,20 +1,21 @@
 {%  extends 'base_index.html' %}
+{% load i18n %}
 {% block slider %}
 <div class="main-banner header-text">
   <div class="container-fluid">
     <div class="owl-banner owl-carousel">
       {% for item in recent_cat %}
         <div class="item">
-            <img src="{{ item.image.url }}" alt="slider-image">
+            <img class="dark-img" src="{{ item.image.url }}" alt="slider-image">
             <div class="item-content">
               <div class="main-content">
                     <div class="meta-category">
-                      <span>{{ item.category }}</span>
+                      <a href="{{ item.category.get_absolute_url }}"><span>{{ item.category }}</span></a>
                     </div>
-                    <a href="#"><h4>{{ item.title }}</h4></a>
+                    <a href="{{ item.get_absolute_url }}"><h4>{{ item.title }}</h4></a>
                     <ul class="post-info">
                       <li><a href="#">{{ item.created_at|date:"M d, Y" }}</a></li>
-                      <li><a href="#">Gören adamlaryň sany: {{ item.views }}</a></li>
+                      <li><a href="#">{% trans 'Gören adamlaryň sany:' %}{{ item.views }}</a></li>
                     </ul>
                 </div>
             </div>
@@ -27,7 +28,7 @@
 {% block endads %}
     <div class="col-lg-12">
       <div class="main-button">
-        <a href="{% url 'ad-list' %}">Ähli mahabatlary görmek</a>
+        <a href="{% url 'ad-list' %}">{% trans 'Ähli postlary görmek' %}</a>
       </div>
     </div>
 {% endblock %}

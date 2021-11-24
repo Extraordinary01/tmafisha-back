@@ -1,11 +1,13 @@
 {% load static %}
+{% load i18n %}
+{% load cache %}
 <!DOCTYPE html>
 <html lang="en">
 
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
+    <meta name="description" content="{% block description %}{{ description }}{% endblock description %}">
     <meta name="author" content="TemplateMo">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
 
@@ -18,11 +20,11 @@
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
 
-
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/templatemo-stand-blog.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/owl.css' %}">
+    <link rel="stylesheet" href="{% static 'star-ratings/css/star-ratings.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
 <!--
 
@@ -47,7 +49,6 @@ https://templatemo.com/tm-551-stand-blog
 
     <!-- Header -->
     {% include 'inc/_header.html' %}
-
     {% block content %}
     {% endblock %}
     {% include 'inc/_footer.html' %}
@@ -61,8 +62,8 @@ https://templatemo.com/tm-551-stand-blog
     <script src="{% static 'assets/js/slick.js' %}"></script>
     <script src="{% static 'assets/js/isotope.js' %}"></script>
     <script src="{% static 'assets/js/accordions.js' %}"></script>
+    <script type="text/javascript" src="{% static 'star-ratings/js/dist/star-ratings.min.js' %}"></script>
     <script src="{% static 'assets/js/active.js' %}"></script>
-
     <script language = "text/Javascript">
       cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
       function clearField(t){                   //declaring the array outside of the

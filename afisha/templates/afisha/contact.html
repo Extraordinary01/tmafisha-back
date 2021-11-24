@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
+{% load i18n %}
 {% block title %}
-    Habarlaşmak
+    {% trans 'Habarlaşmak' %}
 {% endblock %}
 {% block content %}
     <div class="heading-page header-text">
@@ -9,8 +10,8 @@
           <div class="row">
             <div class="col-lg-12">
               <div class="text-content">
-                <h4>habarlaşmak</h4>
-                <h2>teklipleriňiz bilen paýlaşyň!</h2>
+                <h4>{% trans 'habarlaşmak' %}</h4>
+                <h2>{% trans 'teklipleriňiz bilen paýlaşyň' %}!</h2>
               </div>
             </div>
           </div>
@@ -28,16 +29,14 @@
                 <div class="col-lg-8">
                   <div class="sidebar-item contact-form">
                     <div class="sidebar-heading">
-                      <h2>Teklibiňizi ibermek</h2>
+                      <h2>{% trans 'Teklibiňizi ibermek' %}</h2>
                     </div>
                     <div class="content">
                       <form id="contact" action="{% url 'contact' %}" method="post">
                         {% csrf_token %}
                         <div class="row">
                           <div class="col-md-6 col-sm-12">
-                            <fieldset>
-                              {{ form.name }}
-                            </fieldset>
+                            {{ form.name }}
                           </div>
                           <div class="col-md-6 col-sm-12">
                             <fieldset>
@@ -56,7 +55,7 @@
                           </div>
                           <div class="col-lg-12">
                             <fieldset>
-                              <button type="submit" id="form-submit" class="main-button">Ibermek</button>
+                              <button type="submit" id="form-submit" class="main-button">{% trans 'Ibermek' %}</button>
                             </fieldset>
                           </div>
                         </div>
@@ -67,17 +66,17 @@
                 <div class="col-lg-4">
                   <div class="sidebar-item contact-information">
                     <div class="sidebar-heading">
-                      <h2>biziň maglumatlarymyz</h2>
+                      <h2>{% trans 'biziň maglumatlarymyz' %}</h2>
                     </div>
                     <div class="content">
                       <ul>
                         <li>
-                          <h5>090-484-8080</h5>
-                          <span>TELEFON BELGIMIZ</span>
+                          <h5>{{ phone }}</h5>
+                          <span>{% trans 'TELEFON BELGIMIZ' %}</span>
                         </li>
                         <li>
-                          <h5>info@company.com</h5>
-                          <span>EMAIL SALGYMYZ</span>
+                          <h5>{{ email }}</h5>
+                          <span>{% trans 'EMAIL SALGYMYZ' %}</span>
                         </li>
                         <li>
                         </li>
@@ -88,13 +87,6 @@
               </div>
             </div>
           </div>
-
-          <div class="col-lg-12">
-            <div id="map">
-              <iframe src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="450px" frameborder="0" style="border:0" allowfullscreen></iframe>
-            </div>
-          </div>
-
         </div>
       </div>
     </section>

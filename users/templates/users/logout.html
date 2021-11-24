@@ -1,0 +1,9 @@
+{% extends 'base_register.html' %}
+{% load i18n %}
+{% block title %}
+    {% translate 'Ulgamdan çykmak' %}
+{% endblock %}
+{% block message %}
+    <h2>{% translate 'Siz ulgamdan çykdyňyz. ' %}</h2>
+    <a href="{% url 'login' %}">{% translate 'Ulgama girmek' %}</a>
+{% endblock %}

@@ -1,48 +1,71 @@
 {% load mptt_tags %}
+{% load i18n %}
+{% load change_lang %}
 <header class="">
-  <nav class="navbar navbar-expand-lg">
+  <nav class="navbar navbar-expand-lg" id="main_navbar">
     <div class="container">
-      <a class="navbar-brand" href="{% url 'home' %}"><h2>Türkmen Afişa<em>.</em></h2></a>
+      <a class="navbar-brand" href="{% url 'home' %}"><h2>Saýla<em>.</em></h2></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-            <a class="nav-link" href="{% url 'home' %}">Öý sahypasy
+            <a class="nav-link" href="{% url 'home' %}">{% trans 'Öý sahypasy' %}
               <span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'contact' %}">Habarlaşmak</a>
+            <a class="nav-link" href="{% url 'contact' %}">{% trans 'Habarlaşmak' %}</a>
           </li>
-          <li class="nav-item">
-              <a class="nav-link" href="#">Kategoriýalar</a>
-              <ul class="second-level-menu">
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">{% trans 'Kategoriýalar' %}</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   {% for item in category %}
-                      <li><a class="nav-link" href="{{ item.get_absolute_url }}">{{ item.name }}</a></li>
+                      <li><a class="nav-link dropdown-item text-center" href="{{ item.get_absolute_url }}">{{ item.name }}</a></li>
                   {% endfor %}
               </ul>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Şäherler</a>
-              <ul class="second-level-menu">
+          <li class="nav-item dropdown" id="cities">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% trans 'Şäherler' %}</a>
+              <ul class="dropdown-menu " aria-labelledby="navbarDropdown1">
                   {% recursetree cities %}
-                      <li>
+
                       {% if not node.is_leaf_node %}
-                          <a class="nav-link" href="#">{{ node.name }}</a>
-                          <ul class="third-level-menu">
-                            {{ children }}
-                          </ul>
+                          <li class="nav-item dropdown-submenu">
+                              <a class="nav-link dropdown-item dropdown-toggle text-center" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ node.name }}</a>
+                              <ul class="dropdown-menu border-0 shadow" aria-labelledby="navbarDropdown2">
+                                {{ children }}
+                              </ul>
+                          </li>
                       {% else %}
-                          <a class="nav-link" href="{{ node.get_absolute_url }}">{{ node.name }}</a>
+                          <li>
+                            <a class="nav-link dropdown-item text-center" href="{{ node.get_absolute_url }}">{{ node.name }}</a>
+                          </li>
                       {% endif %}
-                      </li>
                   {% endrecursetree %}
               </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'stocks' %}">Aksiýalar</a>
+            <a class="nav-link" href="{% url 'stocks' %}">{% trans 'Aksiýalar' %}</a>
+          </li>
+          {% if user.is_authenticated %}
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'logout' %}">{% trans 'Çykmak' %}</a>
+              </li>
+          {% else %}
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'login' %}">{% trans 'Login' %}</a>
+              </li>
+          {% endif %}
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% translate 'Dil' %}</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                {% get_language_info_list for LANGUAGES as languages %}
+                  {% for lang in languages %}
+                      <li><a class="nav-link dropdown-item text-center" href="{% change_language lang.code %}">{{ lang.name_local }}</a></li>
+                  {% endfor %}
+              </ul>
           </li>
         </ul>
       </div>

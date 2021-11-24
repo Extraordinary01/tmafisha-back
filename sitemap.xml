@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+		<!--	created with www.mysitemapgenerator.com	-->
+		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+      xmlns:xhtml="http://www.w3.org/1999/xhtml"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+      http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd
+      http://www.w3.org/1999/xhtml
+      http://www.w3.org/2002/08/xhtml/xhtml1-strict.xsd">
+    >
+<url>
+	<loc>https://sayla.su/</loc>
+	<xhtml:link
+      rel="alternate"
+      hreflang="tk"
+      href="https://sayla.su/" />
+    <xhtml:link
+      rel="alternate"
+      hreflang="tk"
+      href="https://sayla.su/tk/" />
+    <xhtml:link
+      rel="alternate"
+      hreflang="ru"
+      href="https://sayla.su/ru/" />
+	<lastmod>2021-01-31T09:10:27+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://sayla.su/tk/</loc>
+	<xhtml:link
+      rel="alternate"
+      hreflang="tk"
+      href="https://sayla.su/tk/" />
+    <xhtml:link
+      rel="alternate"
+      hreflang="ru"
+      href="https://sayla.su/ru/" />
+	<lastmod>2021-01-31T09:10:27+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://sayla.su/tk/contact/</loc>
+	<xhtml:link
+      rel="alternate"
+      hreflang="tk"
+      href="https://sayla.su/tk/contact/" />
+    <xhtml:link
+      rel="alternate"
+      hreflang="ru"
+      href="https://sayla.su/ru/contact/" />
+	<lastmod>2021-01-31T09:10:31+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://sayla.su/tk/category/kafe/</loc>
+	<xhtml:link
+      rel="alternate"
+      hreflang="tk"
+      href="https://sayla.su/tk/category/kafe/" />
+    <xhtml:link
+      rel="alternate"
+      hreflang="ru"
+      href="https://sayla.su/ru/category/kafe/" />
+	<lastmod>2021-01-31T09:10:32+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://sayla.su/tk/city/mary/</loc>
+	<xhtml:link
+      rel="alternate"
+      hreflang="tk"
+      href="https://sayla.su/tk/city/mary/" />
+    <xhtml:link
+      rel="alternate"
+      hreflang="ru"
+      href="https://sayla.su/ru/city/mary/" />
+	<lastmod>2021-01-31T09:10:32+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://sayla.su/tk/stocks/</loc>
+	<xhtml:link
+      rel="alternate"
+      hreflang="tk"
+      href="https://sayla.su/tk/stocks/" />
+    <xhtml:link
+      rel="alternate"
+      hreflang="ru"
+      href="https://sayla.su/ru/stocks/" />
+	<lastmod>2021-01-31T09:10:35+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://sayla.su/ru/</loc>
+	<xhtml:link
+      rel="alternate"
+      hreflang="ru"
+      href="https://sayla.su/ru/" />
+    <xhtml:link
+      rel="alternate"
+      hreflang="tk"
+      href="https://sayla.su/tk/" />
+	<lastmod>2021-01-31T09:10:37+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://sayla.su/tk/ad/mysal/</loc>
+	<xhtml:link
+      rel="alternate"
+      hreflang="tk"
+      href="https://sayla.su/tk/ad/mysal/" />
+    <xhtml:link
+      rel="alternate"
+      hreflang="ru"
+      href="https://sayla.su/ru/ad/mysal/" />
+	<lastmod>2021-01-31T09:10:37+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://sayla.su/tk/ads/</loc>
+	<xhtml:link
+      rel="alternate"
+      hreflang="tk"
+      href="https://sayla.su/tk/ads/" />
+    <xhtml:link
+      rel="alternate"
+      hreflang="ru"
+      href="https://sayla.su/ru/ads/" />
+	<lastmod>2021-01-31T09:10:38+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://sayla.su/ru/contact/</loc>
+	<xhtml:link
+      rel="alternate"
+      hreflang="ru"
+      href="https://sayla.su/ru/contact/" />
+    <xhtml:link
+      rel="alternate"
+      hreflang="tk"
+      href="https://sayla.su/tk/contact/" />
+	<lastmod>2021-01-31T09:10:38+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://sayla.su/ru/category/kafe/</loc>
+	<xhtml:link
+      rel="alternate"
+      hreflang="ru"
+      href="https://sayla.su/ru/category/kafe/" />
+    <xhtml:link
+      rel="alternate"
+      hreflang="tk"
+      href="https://sayla.su/tk/category/kafe/" />
+	<lastmod>2021-01-31T09:10:39+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://sayla.su/tk/ads/popular/</loc>
+	<xhtml:link
+      rel="alternate"
+      hreflang="tk"
+      href="https://sayla.su/tk/ads/popular/" />
+    <xhtml:link
+      rel="alternate"
+      hreflang="ru"
+      href="https://sayla.su/ru/ads/popular/" />
+	<lastmod>2021-01-31T09:10:39+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://sayla.su/ru/city/mary/</loc>
+	<xhtml:link
+      rel="alternate"
+      hreflang="ru"
+      href="https://sayla.su/ru/city/mary/" />
+    <xhtml:link
+      rel="alternate"
+      hreflang="tk"
+      href="https://sayla.su/tk/city/mary/" />
+	<lastmod>2021-01-31T09:10:42+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://sayla.su/ru/stocks/</loc>
+	<xhtml:link
+      rel="alternate"
+      hreflang="ru"
+      href="https://sayla.su/ru/stocks/" />
+    <xhtml:link
+      rel="alternate"
+      hreflang="tk"
+      href="https://sayla.su/tk/stocks/" />
+	<lastmod>2021-01-31T09:10:39+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://sayla.su/ru/ad/mysal/</loc>
+	<xhtml:link
+      rel="alternate"
+      hreflang="ru"
+      href="https://sayla.su/ru/ad/mysal/" />
+    <xhtml:link
+      rel="alternate"
+      hreflang="tk"
+      href="https://sayla.su/tk/ad/mysal/" />
+	<lastmod>2021-01-31T09:10:42+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://sayla.su/ru/ads/</loc>
+	<xhtml:link
+      rel="alternate"
+      hreflang="ru"
+      href="https://sayla.su/ru/ads/" />
+    <xhtml:link
+      rel="alternate"
+      hreflang="tk"
+      href="https://sayla.su/tk/ads/" />
+	<lastmod>2021-01-31T09:10:43+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://sayla.su/ru/ads/popular/</loc>
+	<xhtml:link
+      rel="alternate"
+      hreflang="ru"
+      href="https://sayla.su/ru/ads/popular/" />
+    <xhtml:link
+      rel="alternate"
+      hreflang="tk"
+      href="https://sayla.su/tk/ads/popular/" />
+	<lastmod>2021-01-31T09:10:42+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://sayla.su/static/%C5%9Eertnama.docx</loc>
+	<lastmod>2021-01-31T09:10:43+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+</urlset>

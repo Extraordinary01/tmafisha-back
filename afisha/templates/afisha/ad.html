@@ -1,17 +1,18 @@
 {% extends 'base_index.html' %}
+{% load i18n %}
 {% block adlist %}
     {% for ad in ads %}
       <div class="{{ ad_class }}">
       <div class="blog-post">
         <div class="blog-thumb">
-          <img src="{{ ad.image.url }}" alt="ad-image">
+            <a href="{{ ad.get_absolute_url }}"><img src="{{ ad.image.url }}" alt="ad-image"></a>
         </div>
         <div class="down-content">
           <span><a href="{{ ad.category__get_absolute_url }}">{{ ad.category__name }}</a></span>
           <a href="{{ ad.get_absolute_url }}"><h4>{{ ad.title }}</h4></a>
           <ul class="post-info">
             <li><a href="#">{{ ad.created_at|date:"M d, Y" }}</a></li>
-          <li><a href="#">Gören adamlaryň sany: {{ ad.views }}</a></li>
+          <li><a href="#">{% trans 'Gören adamlaryň sany:' %} {{ ad.views }}</a></li>
           </ul>
           {% autoescape off %}
                 {{ ad.content|truncatewords:25 }}
@@ -21,6 +22,7 @@
               <div class="col-12">
                 <ul class="post-tags">
                   <li><i class="fa fa-tags"></i></li>
+                  <li><a href="{{ ad.category.get_absolute_url }}">{{ ad.category }}</a></li>
                   <li><a href="{{ ad.city.get_absolute_url }}">{{ ad.city }}</a></li>
                 </ul>
               </div>
@@ -32,7 +34,7 @@
     {% empty %}
         <div class="col-lg-12">
             <div class="down-content">
-                <h4>Bagyşlaň siziň gözleýän mahabatlaryňyz entäk ýok!</h4>
+                <h4>{% trans 'Bagyşlaň siziň gözleýän postlaryňyz entäk ýok!' %}</h4>
             </div>
         </div>
     {% endfor %}
@@ -43,7 +45,7 @@
           <ul class="page-numbers">
             {% if page_obj.has_previous %}
               <li>
-                 <a href="{{ q }}?page={{ page_obj.previous_page_number }}">Öňki</a>
+                 <a href="{{ q }}?page={{ page_obj.previous_page_number }}"><i class="fa fa-angle-double-left"></i></a>
                </li>
             {% endif %}
             {% if page_obj.number|add:-3 > 1 %}
@@ -63,7 +65,7 @@
             {% endif %}
             {% if page_obj.has_next %}
                 <li>
-                  <a href="{{ q }}?page={{ page_obj.next_page_number}}">Indiki</a>
+                  <a href="{{ q }}?page={{ page_obj.next_page_number}}"><i class="fa fa-angle-double-right"></i></a>
                 </li>
             {% endif %}
           </ul>
@@ -75,7 +77,7 @@
       <div class="sidebar-item">
           <form action="{% url 'ad-list' %}" method="get">
              {{ form.as_p }}
-             <input type="submit" class="btn btn-outline-warning" value="Filter">
+             <input type="submit" class="btn btn-outline-warning" value="{% trans 'Filter' %}">
           </form>
       </div>
     </div>

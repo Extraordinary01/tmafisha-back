@@ -1,10 +1,25 @@
 asgiref==3.3.1
+certifi==2020.12.5
+chardet==4.0.0
 Django==3.1.4
+django-braces==1.14.0
 django-ckeditor==6.0.0
 django-debug-toolbar==3.2
 django-filter==2.4.0
 django-js-asset==1.2.2
+django-model-utils==4.1.1
+django-modeltranslation==0.16.1
 django-mptt==0.11.0
-Pillow @ file:///C:/Users/Toxin/PycharmProjects/Turkmen_Afisha/Turkmen_Afisha/Pillow-8.0.1-cp38-cp38-win_amd64.whl
+django-orderable==6.1.1
+django-rosetta==0.9.5
+django-star-ratings==0.9.1
+idna==2.10
+Pillow=8.0.1
+polib==1.1.0
+psycopg2==2.8.6
 pytz==2020.5
+requests==2.25.1
+six==1.15.0
 sqlparse==0.4.1
+swapper==1.1.2.post1
+urllib3==1.26.2

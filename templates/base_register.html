@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block content %}
+    {% include 'inc/_call_to_action.html' %}
+    <div class="container" style="margin-top: 50px;">
+        <div class="row justify-content-center">
+            <div class="col-md-5 shadow-sm p-3 mb-5 bg-white rounded">
+                {% block message %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

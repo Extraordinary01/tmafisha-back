@@ -1,0 +1,11 @@
+{% extends 'base_register.html' %}
+{% load i18n %}
+{% block title %}
+    {% translate 'Registrasiýaňyz tassyklandy' %}
+{% endblock %}
+{% block message %}
+    <h2 class="mb-3">{% translate 'Registrasiýaňyz şowly geçdi' %}</h2>
+    <p>{% translate 'Email salgyňyzy tassyklanyňyz üçin sagboluň! Ulgama girmek üçin şu ' %}
+        <a href="{% url 'login' %}">{% translate 'ýollanma' %}</a>{% translate ' basyň.' %}
+    </p>
+{% endblock %}

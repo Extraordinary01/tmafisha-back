@@ -1,0 +1,225 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-01-30 10:54+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\afisha\admin.py:46
+msgid "Surat"
+msgstr "Изображение"
+
+#: .\afisha\forms.py:7 .\afisha\models.py:49
+msgid "Aksiýa"
+msgstr "Акция"
+
+#: .\afisha\forms.py:8 .\afisha\models.py:21 .\afisha\models.py:55
+msgid "Kategoriýa"
+msgstr "Категория"
+
+#: .\afisha\forms.py:8
+msgid "Kategoriýany saýlaň"
+msgstr "Выберите категорию"
+
+#: .\afisha\forms.py:9 .\afisha\models.py:37 .\afisha\models.py:54
+msgid "Şäher"
+msgstr "Город"
+
+#: .\afisha\forms.py:9
+msgid "Şäheri saýlaň"
+msgstr "Выберите город"
+
+#: .\afisha\forms.py:12
+msgid "Adyňyz"
+msgstr "Имя"
+
+#: .\afisha\forms.py:13
+msgid "Email salgyňyz"
+msgstr "Аддрес почты"
+
+#: .\afisha\forms.py:14
+msgid "Tema"
+msgstr "Тема"
+
+#: .\afisha\forms.py:15
+msgid "Teklibiňiz"
+msgstr "Ваше предложение"
+
+#: .\afisha\models.py:11
+msgid "Kategoriýanyň ady"
+msgstr "Название категории"
+
+#: .\afisha\models.py:22
+msgid "Kategoriýalar"
+msgstr "Категории"
+
+#: .\afisha\models.py:26
+msgid "Şäheriň ady"
+msgstr "Название города"
+
+#: .\afisha\models.py:38
+msgid "Şäherler"
+msgstr "Города"
+
+#: .\afisha\models.py:44
+#, fuzzy
+#| msgid "Mahabatyň ady"
+msgid "Postyň ady"
+msgstr "Название поста"
+
+#: .\afisha\models.py:47
+msgid "Kontent"
+msgstr "Контент"
+
+#: .\afisha\models.py:48
+msgid "Döredilen wagt"
+msgstr "Время создания"
+
+#: .\afisha\models.py:50
+msgid "Görlenleriň sany"
+msgstr "Количество просмотров"
+
+#: .\afisha\models.py:51
+msgid "Telefon belgi"
+msgstr "Номер телефона"
+
+#: .\afisha\models.py:52
+msgid "Jaň düwmesine basylanlaryň samy"
+msgstr "Количество нажатий на кнопку звонок"
+
+#: .\afisha\models.py:76
+msgid "Post"
+msgstr "Пост"
+
+#: .\afisha\models.py:77 .\afisha\views.py:61
+msgid "Postlar"
+msgstr "Посты"
+
+#: .\afisha\models.py:81
+msgid "Sosial tordaky akkaundyň ady"
+msgstr "Название аккаунда в социальных сетях"
+
+#: .\afisha\models.py:82
+msgid "URL-y"
+msgstr "URL"
+
+#: .\afisha\models.py:85
+msgid "Sosial tor"
+msgstr "Социальная сеть"
+
+#: .\afisha\models.py:86
+msgid "Sosial torlar"
+msgstr "Социальная сети"
+
+#: .\afisha\templates\afisha\ad.html:15
+#: .\afisha\templates\afisha\details.html:15
+#: .\afisha\templates\afisha\index.html:18
+msgid "Gören adamlaryň sany:"
+msgstr "Количество просмотров:"
+
+#: .\afisha\templates\afisha\ad.html:37
+msgid "Bagyşlaň siziň gözleýän postlaryňyz entäk ýok!"
+msgstr "Простите посты которые вы ищите пока отсутствуют!"
+
+#: .\afisha\templates\afisha\ad.html:80
+msgid "Filter"
+msgstr "Фильтр"
+
+#: .\afisha\templates\afisha\contact.html:4
+msgid "Habarlaşmak"
+msgstr "Связаться"
+
+#: .\afisha\templates\afisha\contact.html:13
+msgid "habarlaşmak"
+msgstr "связаться"
+
+#: .\afisha\templates\afisha\contact.html:14
+msgid "teklipleriňiz bilen paýlaşyň"
+msgstr "поделитесь со своими предложениями"
+
+#: .\afisha\templates\afisha\contact.html:32
+msgid "Teklibiňizi ibermek"
+msgstr "Ваше предложение"
+
+#: .\afisha\templates\afisha\contact.html:58
+msgid "Ibermek"
+msgstr "Отправить"
+
+#: .\afisha\templates\afisha\contact.html:69
+msgid "biziň maglumatlarymyz"
+msgstr "наши контактные данные"
+
+#: .\afisha\templates\afisha\contact.html:75
+msgid "TELEFON BELGIMIZ"
+msgstr "НОМЕР ТЕЛЕФОНА"
+
+#: .\afisha\templates\afisha\contact.html:79
+msgid "EMAIL SALGYMYZ"
+msgstr "АДДРЕС ЭЛЕКТРОННОЙ ПОЧТЫ"
+
+#: .\afisha\templates\afisha\details.html:26
+msgid "Jaň etmek"
+msgstr "Позвонить"
+
+#: .\afisha\templates\afisha\index.html:31
+msgid "Ähli postlary görmek"
+msgstr "Просмотреть все посты"
+
+#: .\afisha\views.py:24
+msgid "Saýla"
+msgstr "Saýla"
+
+#: .\afisha\views.py:30
+msgid "Beýle sahypa ýok!"
+msgstr ""
+
+#: .\afisha\views.py:31
+msgid "Bagyşlaň, siziň gözleýän sahypaňyz saýtymyzda ýok!"
+msgstr "Простите посты которые вы ищите пока отсутствуют!"
+
+#: .\afisha\views.py:36
+msgid "Bu sahypa girmek gadagan!"
+msgstr "Заходить в эту страницу запрещено!"
+
+#: .\afisha\views.py:37
+msgid "Bagyşlaň, size bu sahypa girmek gadagandyr!"
+msgstr "Простите, но заходить в эту страницу вам запрещено!"
+
+#: .\afisha\views.py:42
+msgid "Serwer ýalňyşlygy"
+msgstr "Ошибка сервера"
+
+#: .\afisha\views.py:43
+msgid ""
+"Bagyşlaň, siz bu sahypa girjek bolan wagtyňyz, serwerde ýalňyşlyk ýüze "
+"çykdy! Öý sahypa ýa-da öňki sahypaňyza dolanmagyňyzy haýyyş edýäris!"
+msgstr ""
+"Простите, когда вы пытались зайти на эту страницу произошла ошибка "
+"на сервере! Просим перейти на главнуюу или предыдущую страницу!"
+
+#: .\afisha\views.py:93
+msgid "Aksiýalar"
+msgstr "Акции"
+
+#: .\afisha\views.py:116
+msgid "Meşhur postlar"
+msgstr "Популярные посты"
+
+#: .\afisha\views.py:125
+msgid "Gözleg"
+msgstr "Поиск"

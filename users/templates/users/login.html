@@ -1,0 +1,11 @@
+{% extends 'base_register.html' %}
+{% load i18n %}
+{% load usertags %}
+{% block title %}
+    {% translate 'Ulgama girmek' %}
+{% endblock %}
+{% block message %}
+    {% show_auth 'login' type form %}
+    <p>{% translate 'Eger siz öň ulgama girmedik bolsaňyz, onda ' %}<a href="{% url 'signup' %}">{% translate 'registrasiýa' %}</a></p>
+    <p>{% translate 'Eger siz açar sözüňizi ýadyňyzdan çykaran bolsaňyz, onda ' %}<a href="{% url 'password-reset' %}">{% translate 'paroly täzelemek' %}</a></p>
+{% endblock %}

@@ -1,0 +1,291 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-01-30 10:54+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\users\forms.py:8 .\users\forms.py:18
+msgid "Ulanyjy at"
+msgstr "Имя пользователя"
+
+#: .\users\forms.py:8 .\users\forms.py:18
+msgid "Ulanyjy adyňyzy giriziň"
+msgstr "Введите имя пользователя"
+
+#: .\users\forms.py:9 .\users\forms.py:26
+msgid "Email salgy"
+msgstr "Аддрес электронной почты"
+
+#: .\users\forms.py:9 .\users\forms.py:26
+msgid "Email salgyňyzy giriziň"
+msgstr "Введите аддрес электронной почты"
+
+#: .\users\forms.py:10
+msgid "Parol"
+msgstr "Пароль"
+
+#: .\users\forms.py:10 .\users\forms.py:19
+msgid "Parolyňyzy giriziň"
+msgstr "Введите пароль"
+
+#: .\users\forms.py:11
+msgid "Parolyňyzy tassyklaň"
+msgstr "Подтвердите пароль"
+
+#: .\users\forms.py:11
+msgid "Parolyňyzyň tassyklamasyny giriziň"
+msgstr "Введите подтверждение пароля"
+
+#: .\users\forms.py:19
+msgid "Parolyňyz"
+msgstr "Ваш пароль"
+
+#: .\users\forms.py:29
+msgid "Täze parolyňyz"
+msgstr "Новый пароль"
+
+#: .\users\forms.py:30
+msgid "Täze parolyňyzy giriziň"
+msgstr "Введите новый пароль"
+
+#: .\users\forms.py:31
+msgid "Täze parolyňyzyň tassyklamasy"
+msgstr "Подтвердите новый пароль"
+
+#: .\users\forms.py:32
+msgid "Täze parolyňyziň tassyklamasyny giriziň"
+msgstr "Введите подтверждение нового пароля"
+
+#: .\users\templates\users\activate_email.html:3
+#: .\users\templates\users\reset_password_email.html:2
+msgid "Salam"
+msgstr "Привет"
+
+#: .\users\templates\users\activate_email.html:4
+msgid "Aşakdaky ýollanma basyp registrasiýaňyzy tassyklamagyňyzy haýyş edýäris"
+msgstr "Просим подтвердить регистрацию нажав на ссылку внизу"
+
+#: .\users\templates\users\activate_email.html:6
+msgid ""
+"Eger web sahypamyzda siz registrasiýadan geçmedik bolsaňyz, onda şu email-a "
+"üns bermäň!"
+msgstr ""
+"Если вы не проходили регистрацию на нашем сайте, просим просто "
+"игнорироватьэто письмо!"
+
+#: .\users\templates\users\activation_error.html:4
+msgid "Registrasiýaňyz tassyklanmady"
+msgstr "Регистрация не подтверждена"
+
+#: .\users\templates\users\activation_error.html:7
+msgid "Registrasiýaňyz şowly geçmedi"
+msgstr "Регистрация прошла не успешно"
+
+#: .\users\templates\users\activation_error.html:8
+msgid "Siziň aktiwasion ýollanmaňyz ýalňyş!"
+msgstr "Ваша активационная ссылка неправильная!"
+
+#: .\users\templates\users\activation_success.html:4
+msgid "Registrasiýaňyz tassyklandy"
+msgstr "Ваша регистрация подтверждена"
+
+#: .\users\templates\users\activation_success.html:7
+msgid "Registrasiýaňyz şowly geçdi"
+msgstr "Регистрация прошла успешно"
+
+#: .\users\templates\users\activation_success.html:8
+msgid "Email salgyňyzy tassyklanyňyz üçin sagboluň! Ulgama girmek üçin şu "
+msgstr ""
+"Спасибо за подтверждение электронной почты. Чтобы войти в систему нажмите на "
+"эту"
+
+#: .\users\templates\users\activation_success.html:9
+msgid "ýollanma"
+msgstr "ссылку"
+
+#: .\users\templates\users\activation_success.html:9
+msgid " basyň."
+msgstr ""
+
+#: .\users\templates\users\auth_form.html:3
+#: .\users\templates\users\auth_form.html:17
+#, fuzzy, python-format
+#| msgid "%(type)lar"
+msgid "%(type)s"
+msgstr "%(type)и"
+
+#: .\users\templates\users\confirm_email.html:4
+msgid "Registrasiýany tassyklamak"
+msgstr "Подтверждение регистрации"
+
+#: .\users\templates\users\confirm_email.html:7
+msgid "Registrasiýaňyzy tassyklaň"
+msgstr "Подтвердите регистрацию"
+
+#: .\users\templates\users\confirm_email.html:8
+msgid ""
+"Registrasiýaňyzy tassyklamak üçin, biz sizň girizen email salgyňyzy hat "
+"ugratdyk. Şol hatyň düzümindäki ýollanma basmak arkaly siz özüňizi tassyklap "
+"bilersiňiz!"
+msgstr ""
+"Чтобы подтвердить регистрацию мы отправили письмо на вашу электронную почту "
+"которую вы ввели. Нажав на ссылку содержающейся в письме вы сможете "
+"подтвердить себя!"
+
+#: .\users\templates\users\inactive.html:4
+msgid "Ulgama girip bolmady"
+msgstr "Не удалось войти в систему"
+
+#: .\users\templates\users\inactive.html:5
+msgid "Siz entäk özüňizi tassyklamadyňyz!"
+msgstr "Вы ещё себя не подтвердили!"
+
+#: .\users\templates\users\login.html:5 .\users\templates\users\logout.html:8
+#: .\users\templates\users\reset_password_complete.html:12 .\users\views.py:71
+msgid "Ulgama girmek"
+msgstr "Войти в систему"
+
+#: .\users\templates\users\login.html:9
+msgid "Eger siz öň ulgama girmedik bolsaňyz, onda "
+msgstr "Если вы раньше не входили в систему, то тогда "
+
+#: .\users\templates\users\login.html:9
+msgid "registrasiýa"
+msgstr "регистрация"
+
+#: .\users\templates\users\login.html:10
+msgid "Eger siz açar sözüňizi ýadyňyzdan çykaran bolsaňyz, onda "
+msgstr "Если вы забыли пароль, то тогда "
+
+#: .\users\templates\users\login.html:10
+msgid "paroly täzelemek"
+msgstr "обновить пароль"
+
+#: .\users\templates\users\logout.html:4
+msgid "Ulgamdan çykmak"
+msgstr "Выйти из системы"
+
+#: .\users\templates\users\logout.html:7
+msgid "Siz ulgamdan çykdyňyz. "
+msgstr "Вы вышли из системы"
+
+#: .\users\templates\users\reset_password.html:4
+#: .\users\templates\users\reset_password_done.html:4
+#: .\users\templates\users\reset_password_form.html:19
+msgid "Paroly täzelemek"
+msgstr "Обновить пароль"
+
+#: .\users\templates\users\reset_password.html:8
+#: .\users\templates\users\reset_password_done.html:8
+#: .\users\templates\users\reset_password_form.html:8
+msgid "Paroly täzelemek sahypasy"
+msgstr "Страница обновления пароля"
+
+#: .\users\templates\users\reset_password.html:9
+msgid ""
+"Parolyňyzy ýatdan çykaran bolsaňyz, saýtymyzda registrasiýa bolan email "
+"salgyňyzy aşaky meýdançada ýazyň"
+msgstr ""
+"Если вы забыли свой пароль, введите в поле внизу ваш электронный аддрес  по "
+"которому вы зарегистрировались на нашем сайте"
+
+#: .\users\templates\users\reset_password.html:16
+msgid "Hat ugratmak"
+msgstr "Отправить письмо"
+
+#: .\users\templates\users\reset_password_complete.html:4
+msgid "Täze parol şowly goýuldy"
+msgstr "Новый пароль"
+
+#: .\users\templates\users\reset_password_complete.html:8
+msgid "Parolyňyz täzelendi"
+msgstr "Ваш пароль обновлен"
+
+#: .\users\templates\users\reset_password_complete.html:9
+msgid "Siziň parolyňyz täzelendi. Täzeden ulgama girmegiňizi haýyş edýäris"
+msgstr "Ваш пароль обновлен. Просим заново войти в систему"
+
+#: .\users\templates\users\reset_password_done.html:9
+msgid ""
+"Biz siziň email salgyňyza paroly çalşyş koduny iberdik. Eger size hiç hili "
+"hat gelmedik bolsa, onda girizen email salgyňyzyň dogry girizendigiňize üns "
+"beriň!"
+msgstr ""
+"Мы отправили на вашу электронную почту код для обновления пароля. Если вы не "
+"получили письмо, то тогда просим вас удостоверится в том что вы ввели "
+"правильный аддрес электронной почты!"
+
+#: .\users\templates\users\reset_password_email.html:3
+msgid ""
+"Eger-de siz parolyňyzy täzelemekligi isleýän bolsaňyz onda aşakdaky ýollanma "
+"basyň:"
+msgstr ""
+"Если вы хотите обновить пароль, то тогда просим нажать на ссылку внизу: "
+
+#: .\users\templates\users\reset_password_form.html:4
+msgid "Täze paroly girizmek"
+msgstr "Введите новый пароль"
+
+#: .\users\templates\users\reset_password_form.html:9
+msgid ""
+"Täze parolyňyzy aşakdaky meýdançada girizip tassyklamagyňyzy haýyş edýäris!"
+msgstr "В поле внизу просим ввести ваш новый пароль и его подтверждение!"
+
+#: .\users\templates\users\signup.html:6 .\users\views.py:41
+#: .\users\views.py:45
+msgid "Registrasiýa"
+msgstr "Регистрация"
+
+#: .\users\templates\users\signup.html:11
+msgid "Siz registrasiýa düwmesine basyp, şu "
+msgstr "Нажав на кнопку регистрация вы соглошаетес с нашим пользовательским"
+
+#: .\users\templates\users\signup.html:12
+msgid "şertnama "
+msgstr "соглашением "
+
+#: .\users\templates\users\signup.html:13
+msgid "bilen razylaşýaňyz!"
+msgstr " "
+
+#: .\users\templates\users\signup.html:15
+msgid "Eger siz öň ulgama girip gören bolsaňyz, onda "
+msgstr "Если вы раньше входили систему, то тогда "
+
+#: .\users\templates\users\signup.html:15
+msgid "ulgama giriň"
+msgstr "войдите в систему"
+
+#: .\users\views.py:29
+msgid "Email salgyňyzy tassyklaň."
+msgstr "Подтвердите аддрес электронной почты"
+
+#, python-format
+#~ msgid "%(title)lar"
+#~ msgstr "%(title)и"
+
+#, python-format
+#~ msgid ""
+#~ "\n"
+#~ "        %(title)s\n"
+#~ "    "
+#~ msgstr ""
+#~ "\n"
+#~ "        %(title)и\n"
+#~ "    "

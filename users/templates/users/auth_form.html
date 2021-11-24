@@ -1,0 +1,19 @@
+{% load i18n %}
+<div class="text-center">
+    <h2 class="mb-3 was-validated">{% blocktranslate %}{{ type }}{% endblocktranslate %}</h2>
+    <form class="needs-validation" action="{% url url %}" method="post" novalidate>
+        {% csrf_token %}
+        {% for item in form %}
+            <div class="form-group">
+                {{ item }}
+            </div>
+            <div class="errors mb-3">
+                {{ item.errors }}
+            </div>
+        {% endfor %}
+        <div class="errors mb-3">
+            {{ form.non_field_errors }}
+        </div>
+        <input type="submit" class="btn btn-outline-warning mb-3" value="{% blocktranslate %}{{ type }}{% endblocktranslate %}">
+    </form>
+</div>
